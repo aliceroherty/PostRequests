@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gpio Control</title>
+        <link rel="stylesheet" type="text/css" href="../assets/styles.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.js"
+            integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+            crossorigin="anonymous">
+        </script>
+        <script src="../controllers/index.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Gpio Control</h1>
+        </header>
+        <main>
+            <div id="wrapper">
+                <h2>Click the buttons to turn the GPIO pin on or off.</h2>
+                <div class="btn_container">
+                    <button class="btn" id="btn_on"><a href="/on">ON</a></button>
+                    <button class="btn" id="btn_off"><a href="/off">OFF</a></button>
+                </div>
+            </div>
+            <form id="blink" method="POST" action="/">
+                <h2>Input an interval in milliseconds and click the button to blink the GPIO on and off.</h2>
+                <label for="interval">Interval (ms): </label>
+                <input id="interval" name="interval" type="text" /> 
+                <div class="btn_container">
+                    <input class="btn blink_btn" type="submit" value="Start"></input>
+                    <input id="stop" class="btn blink_btn" type="button" value="Stop"/>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
